@@ -1,12 +1,12 @@
 package zombie;
 
-interface Recovery {
-	public void recover(int recoveredHp);
-}
-
 interface Move {
 	public void move();
 
+}
+
+interface Recovery {
+	public void recover();
 }
 
 public abstract class Unit {
@@ -24,7 +24,7 @@ public abstract class Unit {
 		this.power = power;
 		this.MAX_HP = hp;
 		this.isDead = false;
-	}							
+	}
 
 	public int getLocation() {
 		return this.location;
@@ -38,21 +38,16 @@ public abstract class Unit {
 		return this.hp;
 	}
 
-	public void setHpPlus() {
-		if (this.hp < this.MAX_HP)
-			hp++;
-	}
-
-	public void setHpMinus() {
-		if (this.hp > 0) {
-			this.hp--;
-			if (this.hp == 0)
-				this.isDead = true;
-		}
+	public void setHp(int hp) {
+		this.hp = hp;
 	}
 
 	public int getPower() {
 		return this.power;
+	}
+
+	public void setPower(int power) {
+		this.power = power;
 	}
 
 	public boolean isDead() {
@@ -62,5 +57,16 @@ public abstract class Unit {
 	abstract void attack(Unit enenmy);
 
 	abstract void Damageable(Unit enenmy);
+
+	@Override
+	public String toString() {
+
+		return isDead ? String.format("[%s] 사망", name) : String.format("[%s hp] %d/%d", name, hp, MAX_HP);
+	}
+
+	public void recover() {
+		// TODO Auto-generated method stub
+
+	}
 
 }
