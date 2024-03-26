@@ -61,6 +61,11 @@ public class Game {
 			while (!hero.isDead() && !zombie.isDead()) {
 				printSubMenu();
 				runSubMenu(inputNumber());
+
+				if (zombie.isDead())
+					System.out.println("좀비를 쓰러트렸어!");
+				if (hero.isDead())
+					System.out.println("사망했습니다.");
 			}
 
 		} else if (hero.getLocation() == boss.getLocation()) {
@@ -69,6 +74,13 @@ public class Game {
 			while (!hero.isDead() && !boss.isDead()) {
 				printSubMenu();
 				runSubMenu(inputNumber());
+
+				if (boss.isDead())
+					System.out.println("보스를 쓰러트렸어!");
+				if (hero.isDead()) {
+					System.out.println("사망했습니다.");
+
+				}
 			}
 		}
 	}
@@ -107,12 +119,15 @@ public class Game {
 	}
 
 	private boolean isRun() {
-		return isGoal || hero.getLocation() == 10 ? false : true;
+		return isGoal || hero.getLocation() == 10 || hero.isDead() ? false : true;
 
 	}
 
 	private void printResult() {
-		System.out.println("도착!");
+		if (!hero.isDead())
+			System.out.println("괴물들을 무찌르고 무사히 도착했어!");
+		else
+			System.out.println("괴물들을 퇴치하는데 실패했어..");
 	}
 
 	public void run() {
