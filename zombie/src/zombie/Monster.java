@@ -8,6 +8,5 @@ public abstract class Monster extends Unit {
 
 	abstract void attack(Unit enenmy);
 
-	abstract void Damageable(Unit enenmy);
 
 }

@@ -16,22 +16,16 @@ public class Hero extends Human implements Move, Recovery {
 
 		super.setPower(ran.nextInt(super.MAX_POWER));
 		zombie.setHp(zombie.getHp() - super.getPower());
-		System.out.printf("용사의 %d 데미지의 공격!\n", super.getPower());
+		System.out.printf("용사의 %d 데미지의 공격! ", super.getPower());
 
-	}
-
-	@Override
-	void Damageable(Unit zombie) {
-		super.setHp(super.getHp() - zombie.getPower());
-
-		if (super.getHp() < 0) {
-			super.setHp(0);
-			super.setIsDead();
+		if (zombie.getHp() < 0) {
+			zombie.setHp(0);
+			zombie.setIsDead();
 		}
 
 		System.out.println(zombie);
-
 	}
+
 
 	@Override
 	public void move() {

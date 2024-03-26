@@ -11,20 +11,17 @@ public class Zombie extends Monster {
 
 	@Override
 	void attack(Unit hero) {
-		int ranPower = ran.nextInt(super.getPower());
-		hero.setHp(hero.getHp() - ranPower);
-		System.out.printf("좀비의 %d 데미지의 공격!\n", super.getPower());
+		super.setPower(ran.nextInt(super.MAX_POWER));
+		hero.setHp(hero.getHp() - super.getPower());
+		System.out.printf("좀비의 %d 데미지의 공격! ", super.getPower());
 
-	}
-
-	@Override
-	void Damageable(Unit hero) {
-		super.setHp(super.getHp() - hero.getPower());
-
-		if (super.getHp() < 0) {
-			super.setHp(0);
-			super.setIsDead();
+		if (hero.getHp() < 0) {
+			hero.setHp(0);
+			hero.setIsDead();
 		}
+
 		System.out.println(hero);
 	}
+
+	
 }

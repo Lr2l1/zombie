@@ -17,6 +17,5 @@ public abstract class Human extends Unit {
 
 	abstract void attack(Unit enenmy);
 
-	abstract void Damageable(Unit enenmy);
 
 }
