@@ -14,11 +14,9 @@ public class Game {
 	Zombie zombie = new Zombie();
 	Boss boss = new Boss();
 
-	private boolean isGoal;;
+	private boolean isGoal;
 
 	private Game() {
-
-		this.isGoal = false;
 	}
 
 	private static Game instance = new Game();
@@ -51,7 +49,6 @@ public class Game {
 
 	private void move() {
 		hero.move();
-
 	}
 
 	private void meetEnemy() {
@@ -86,7 +83,7 @@ public class Game {
 	}
 
 	private void printSubMenu() {
-		System.out.printf("[1]공격하기 [2]체력회복 (%d/5) : ", hero.portion);
+		System.out.printf("[1]공격하기 [2]체력회복 (%d/5) : ", hero.getPortion());
 	}
 
 	private void runSubMenu(int select) {
@@ -97,7 +94,6 @@ public class Game {
 				fightBoss();
 		} else if (select == RECOVER)
 			recover();
-
 	}
 
 	private void fightZombie() {

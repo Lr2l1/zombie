@@ -4,11 +4,19 @@ import java.util.Random;
 
 public class Hero extends Human implements Move, Recovery {
 	private Random ran = new Random();
-	int portion;
+	private int portion;
 
 	public Hero() {
 		super(1, "용사님", 200, 20);
 		this.portion = 5;
+	}
+	
+	public int getPortion() {
+		return this.portion;
+	}
+	
+	public void setPortion(int portion) {
+		this.portion = portion;
 	}
 
 	@Override
@@ -38,6 +46,7 @@ public class Hero extends Human implements Move, Recovery {
 		if (portion > 0 && super.getHp() <= 100) {
 			super.setHp(super.getHp() + 100);
 			System.out.println("HP가 100 회복되었습니다.");
+			setPortion(getPortion()-1);
 		} else
 			System.err.println("회복이 불가능합니다!");
 
