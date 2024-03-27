@@ -6,7 +6,6 @@ public abstract class Monster extends Unit {
 		super(location, name, hp, power);
 	}
 
+	abstract void berserk (Human enenmy) ; 
 	
-
-
 }

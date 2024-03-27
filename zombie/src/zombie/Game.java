@@ -98,12 +98,19 @@ public class Game {
 
 	private void fightZombie() {
 		hero.attack(zombie);
-		zombie.attack(hero);
+		if (zombie.getHp() < zombie.MAX_HP / 4)
+			zombie.berserk(hero);
+		else
+			zombie.attack(hero);
+
 	}
 
 	private void fightBoss() {
 		hero.attack(boss);
-		boss.attack(hero);
+		if (boss.getHp() < boss.MAX_HP / 4)
+			boss.berserk(hero);
+		else
+			boss.attack(hero);
 	}
 
 	private void recover() {
