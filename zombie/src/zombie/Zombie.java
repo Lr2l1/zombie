@@ -12,7 +12,7 @@ public class Zombie extends Monster {
 	public Zombie(int location, String name, int hp, int power) {
 		super(location, name, hp, power);
 	}
-
+	
 	@Override
 	void attack(Unit hero) {
 		super.setPower(ran.nextInt(super.MAX_POWER));

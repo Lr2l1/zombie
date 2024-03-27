@@ -1,6 +1,6 @@
 package zombie;
 
-public abstract  class Unit {
+public abstract class Unit {
 	public final int MAX_HP;
 	public final int MAX_POWER;
 	private int location;
@@ -26,7 +26,11 @@ public abstract  class Unit {
 	public void setLocation() {
 		this.location += 1;
 	}
-
+	
+	public String getName() {
+		return this.name;
+	}
+	
 	public int getHp() {
 		return this.hp;
 	}
