@@ -56,10 +56,10 @@
 
 > Class Diagram
 
-![diagram](zombie/image/zombie.jpg)
+![diagram]()
 
 > Demo
 
 
-![demo](zombie/image/zombieGameDemo.gif)
+![demo]()
 
