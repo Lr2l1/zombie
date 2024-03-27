@@ -6,6 +6,5 @@ public abstract class Human extends Unit {
 		super(location, name, hp, power);
 	}
 
-	abstract void attack(Monster enemy);
 
 }
