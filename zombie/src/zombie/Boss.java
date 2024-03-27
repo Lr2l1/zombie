@@ -2,7 +2,7 @@ package zombie;
 
 import java.util.Random;
 
-public class Boss extends Monster {
+public class Boss extends Zombie{
 	private Random ran = new Random();
 
 	public Boss() {
