@@ -59,5 +59,5 @@
 > Demo
 
 
-![demo](zombie/image/ZombieGameDemo.gif)
+![demo](zombie/image/zombieGameDemo.gif)
 
