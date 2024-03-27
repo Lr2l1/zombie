@@ -33,7 +33,7 @@
 
 > Class Diagram
 
-![diagram](zombie/image/zombie.jpg)
+![diagram](zombie/image/zombieFinal.jpg)
 
 > Demo
 
