@@ -34,7 +34,7 @@ public abstract  class Unit {
 	public void setHp(int hp) {
 		this.hp = hp;
 	}
-
+	
 	public int getPower() {
 		return this.power;
 	}
