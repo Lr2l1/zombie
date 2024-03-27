@@ -61,5 +61,5 @@
 > Demo
 
 
-![demo]()
+![demo](zombie/image/zombieGameDemo.gif)
 
