@@ -2,7 +2,7 @@ package zombie;
 
 import java.util.Random;
 
-public class Hero extends Human implements Move, Recovery {
+public class Hero extends Human implements Movable, Recoverable {
 	private Random ran = new Random();
 	private int portion;
 
