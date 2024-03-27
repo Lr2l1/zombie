@@ -1,6 +1,6 @@
 package zombie;
 
-public class Unit {
+public abstract  class Unit {
 	public final int MAX_HP;
 	public final int MAX_POWER;
 	private int location;
@@ -50,7 +50,9 @@ public class Unit {
 	public void setIsDead() {
 		this.isDead = !isDead;
 	}
-
+	
+	abstract void attack(Unit enenmy);
+	
 	@Override
 	public String toString() {
 
