@@ -20,8 +20,8 @@ public class Hero extends Human implements Move, Recovery {
 	}
 
 	@Override
-	void attack(Unit zombie) {
-
+	void attack(Monster zombie) {
+		
 		super.setPower(ran.nextInt(super.MAX_POWER));
 		zombie.setHp(zombie.getHp() - super.getPower());
 		System.out.printf("용사의 %d 데미지의 공격! ", super.getPower());
