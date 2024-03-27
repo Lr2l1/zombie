@@ -46,7 +46,7 @@
 
 > Class Diagram
 
-![diagram](zombie/image/zombie.jpg)
+![diagram]()
 
 > Demo
 
